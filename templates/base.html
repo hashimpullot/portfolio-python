@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <tittle>Muhammed Hashim Pullot</tittle>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<meta charset="UTF-8">
+<title>Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-<nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/projects">Projects</a>
-    <a href="/contact">Contact</a>
-</nav>
+<header class="nav">
+    <div class="logo">Muhammed Hashim Pullot</div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/projects">Work</a>
+        <a href="/about">About</a>
+    </nav>
+</header>
 
-<div class="container">
-    {%block content %}{% endblock %}
-</div>
+<main>
+    {% block content %}{% endblock %}
+</main>
 
 </body>
 </html>
